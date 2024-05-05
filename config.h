@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 3;        /* border pixel of windows */
+static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int swallowfloating    = 1;        /* 1 means swallow floating windows by default */
 static const unsigned int gappih    = 10;       /* horiz inner gap between windows */
@@ -17,7 +17,7 @@ static char normbgcolor[]           = "#222222";
 static char normbordercolor[]       = "#444444";
 static char normfgcolor[]           = "#bbbbbb";
 static char selfgcolor[]            = "#eeeeee";
-static char selbordercolor[]        = "#005577";
+static char selbordercolor[]        = "#770000";
 static char selbgcolor[]            = "#005577";
  static char *colors[][3] = {
          /*               fg           bg           border   */
@@ -114,26 +114,6 @@ static const Key keys[] = {
 
         { MODKEY,                       XK_x,      shiftview,  	   { .i = +1 } },
 	{ MODKEY,                       XK_c,      shiftview,      { .i = -1 } },
-
-	{ MODKEY,                       XK_z,      spawn,          SHCMD("~/.scripts/pm") },
-
-	{ MODKEY,                       XK_n,      spawn,          SHCMD("~/.local/bin/newsboatwm") },
-	{ MODKEY|ShiftMask,             XK_g,      spawn,          SHCMD("~/.local/bin/htopwm") },
-	{ MODKEY,                       XK_v,      spawn,          SHCMD("~/.local/bin/pulsemixerwm") },
-	{ MODKEY|ShiftMask,             XK_s,      spawn,          SHCMD("~/.local/bin/tremcwm") },
-	{ MODKEY|ShiftMask,             XK_z,      spawn,          SHCMD("~/.local/bin/zshwm") },
-
-	{ MODKEY|ShiftMask,             XK_e,      spawn,          SHCMD("ls ~/.scripts | dmenu -l 30 | xargs -r sh") },
-	{ MODKEY,                       XK_s,      spawn,          SHCMD("tabbed -c surf -e && rm -rf ~/.surf/cookies.txt") },
-	{ MODKEY|ShiftMask,             XK_p,      spawn,          SHCMD("passmenu -l 20") },
-	{ MODKEY|ShiftMask,             XK_Insert, spawn,          SHCMD("xdotool type $(grep -v '^#' ~/.local/share/andrei/bookmarks | dmenu -i -l 50 | cut -d' ' -f1)") },
-
-	{ MODKEY|ShiftMask,             XK_h,      spawn,          SHCMD("med") },
-	{ MODKEY|ShiftMask,             XK_l,      spawn,          SHCMD("umed") },
-
-	{ MODKEY|ShiftMask,             XK_m,      spawn,          SHCMD("pulsemixer --toggle-mute") },
-	{ MODKEY|ShiftMask,             XK_b,      spawn,          SHCMD("pactl set-sink-volume 0 +10%") },
-	{ MODKEY|ShiftMask,             XK_n,      spawn,          SHCMD("pactl set-sink-volume 0 -10%") },
 
 	{ MODKEY|Mod1Mask,              XK_u,      incrgaps,       {.i = +1 } },
 	{ MODKEY|Mod1Mask|ShiftMask,    XK_u,      incrgaps,       {.i = -1 } },
